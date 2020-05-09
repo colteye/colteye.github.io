@@ -1,25 +1,74 @@
 <!DOCTYPE html>
+<meta charset="utf-8"/>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>My test page</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-    <h1>Mozilla is cool</h1>
-    <img src="images/firefox-icon.png" alt="The Firefox logo: a flaming fox surrounding the Earth.">
+    <head>
+        <title>Erik Coltey's Portfolio</title>
+        <link rel="stylesheet" href="styles/style.css" type="text/css">
+    </head>
+    <body>
+		<div class="navbar">
+			<a href="#home">Home</a>
+			<a href="#about">About</a>
+			<a href="#portfolio">Portfolio</a>
+		</div>
+		<div id="canvas">
+			<div id="overlay">
+				<span class="title1">ERIK COLTEY.</span>
+			</div>
+		</div>
 
-    <p>At Mozilla, we’re a global community of</p>
-
-    <ul> <!-- changed to list in the tutorial -->
-      <li>technologists</li>
-      <li>thinkers</li>
-      <li>builders</li>
-    </ul>
-
-    <p>working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
-
-    <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
-  </body>
+		<script type="text/javascript" src="threejs/three.js"></script>
+		<script type="text/javascript" src="threejs/orbitalcontrols.js"></script>
+		<script type="text/javascript" src="threejs/plyloader.js"></script>
+		
+		<script type="text/javascript" src="scripts/modelAnimation.js"></script>
+		
+		<div class="aboutme">
+			<img  class="profilepic" src="images/profilepic.png"></img>
+			<div class="meDescription">
+				<span class="descriptionHeader">Hey! I'm Erik.&#128522;</span>
+				<p>
+				I'm a rising Senior at Florida International University, majoring in Computer Engineering. My concentrations are on Data Systems and AI, with an interest in visualization software, big data, AR/VR, and the mixture of the arts and engineering.
+				<hr style="opacity:0; height: 10px;">
+				When I'm not studying for my degree, I'm working on my side job as a freelance 3D modeler for Valve Software, along with volunteering at the FIU edge lab, and working at a Computer Science lab at FIU as an undergraduate research assistant.
+				</p>
+			</div>
+		</div>
+		
+		<div class="contact" > Check it Out!</div>
+		
+		<div class="linklist">	
+			<div class="link">
+			<a href="https://www.linkedin.com/in/erikcoltey/">
+				<img src="images/linkedin_icon.png" alt="LinkedIn" style="width:100%">
+			</a>
+			<span class="tooltip">LinkedIn</span>
+			</div>
+			<div class="link">
+			<a href="https://www.artstation.com/colteh/">
+				<img src="images/artstation_icon.png" alt="ArtStation" style="width:100%">
+			</a>
+			<span class="tooltip">ArtStation</span>
+			</div>
+			<div class="link">
+			<a href="mailto:colteye@gmail.com?Subject=Initial%20Contact">
+				<img src="images/gmail_icon.png" alt="GMail" style="width:100%">
+			</a>
+			<span class="tooltip">GMail</span>
+			</div>
+			<div class="link">
+			<a href="https://github.com/colteye">
+				<img src="images/github_icon.png" alt="Github" style="width:100%">
+			</a>
+			<span class="tooltip">Github</span>
+			</div>
+			<div class="link">
+			<a href="Erik_Coltey_Resume.pdf">
+				<img src="images/resume_icon.png" alt="Resume" style="width:100%">
+			</a>
+			<span class="tooltip">Resume</span>
+			</div>
+		</div>
+		
+    </body>
 </html>
