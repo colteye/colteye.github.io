@@ -1,74 +1,50 @@
 <!DOCTYPE html>
-<meta charset="utf-8"/>
-<html>
-    <head>
-        <title>Erik Coltey's Portfolio</title>
-        <link rel="stylesheet" href="styles/style.css" type="text/css">
-    </head>
-    <body>
-		<div class="navbar">
-			<a href="#home">Home</a>
-			<a href="#about">About</a>
-			<a href="#portfolio">Portfolio</a>
-		</div>
-		<div id="canvas">
-			<div id="overlay">
-				<span class="title1">ERIK COLTEY.</span>
-			</div>
-		</div>
+<meta charset="utf-8" />
+<html lang="en">
 
-		<script type="text/javascript" src="threejs/three.js"></script>
-		<script type="text/javascript" src="threejs/orbitalcontrols.js"></script>
-		<script type="text/javascript" src="threejs/plyloader.js"></script>
-		
-		<script type="text/javascript" src="scripts/modelAnimation.js"></script>
-		
-		<div class="aboutme">
-			<img  class="profilepic" src="images/profilepic.png"></img>
-			<div class="meDescription">
-				<span class="descriptionHeader">Hey! I'm Erik.&#128522;</span>
-				<p>
-				I'm a rising Senior at Florida International University, majoring in Computer Engineering. My concentrations are on Data Systems and AI, with an interest in visualization software, big data, AR/VR, and the mixture of the arts and engineering.
-				<hr style="opacity:0; height: 10px;">
-				When I'm not studying for my degree, I'm working on my side job as a freelance 3D modeler for Valve Software, along with volunteering at the FIU edge lab, and working at a Computer Science lab at FIU as an undergraduate research assistant.
-				</p>
-			</div>
+<head>
+	<title>Erik Coltey's Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Description" content="Erik Coltey's Portfolio, showcasing projects and information on projects and work">
+		   
+	<link rel="stylesheet" href="styles/style.css" type="text/css"> </head>
+
+<body>
+	<div class="nav-bar"> <a href="#home">Home</a> <a href="#about">About</a> <a href="#portfolio">Portfolio</a> </div>
+	<div id="canvas">
+		<div id="overlay"> <span class="title">ERIK COLTEY.</span> </div>
+	</div>
+	<script type="text/javascript" src="threejs/three.js"></script>
+	<script type="text/javascript" src="threejs/orbitalcontrols.js"></script>
+	<script type="text/javascript" src="threejs/plyloader.js"></script>
+	<script type="text/javascript" src="scripts/modelAnimation.js"></script>
+	<div class="about-me"> <img class="profile-pic" src="images/profilepic.png" alt="Profile Picture"></img>
+		<div class="me-description"> <span class="description-header">Hey! I'm Erik.</span>
+			<p>I'm a rising Senior at Florida International University, majoring in Computer Engineering. My concentrations are on Data Systems and AI, with an interest in visualization software, big data, AR/VR, and the mixture of the arts and engineering.
+				<hr style="opacity:0; height: 10px;">When I'm not studying for my degree, I'm working on my side job as a freelance 3D modeler for Valve Software, along with volunteering at the FIU edge lab, and working at a Computer Science lab at FIU as an undergraduate research assistant. </p>
 		</div>
-		
-		<div class="contact" > Check it Out!</div>
-		
-		<div class="linklist">	
-			<div class="link">
-			<a href="https://www.linkedin.com/in/erikcoltey/">
-				<img src="images/linkedin_icon.png" alt="LinkedIn" style="width:100%">
-			</a>
-			<span class="tooltip">LinkedIn</span>
-			</div>
-			<div class="link">
-			<a href="https://www.artstation.com/colteh/">
-				<img src="images/artstation_icon.png" alt="ArtStation" style="width:100%">
-			</a>
-			<span class="tooltip">ArtStation</span>
-			</div>
-			<div class="link">
-			<a href="mailto:colteye@gmail.com?Subject=Initial%20Contact">
-				<img src="images/gmail_icon.png" alt="GMail" style="width:100%">
-			</a>
-			<span class="tooltip">GMail</span>
-			</div>
-			<div class="link">
-			<a href="https://github.com/colteye">
-				<img src="images/github_icon.png" alt="Github" style="width:100%">
-			</a>
-			<span class="tooltip">Github</span>
-			</div>
-			<div class="link">
-			<a href="Erik_Coltey_Resume.pdf">
-				<img src="images/resume_icon.png" alt="Resume" style="width:100%">
-			</a>
-			<span class="tooltip">Resume</span>
-			</div>
-		</div>
-		
-    </body>
+	</div>
+	<div class="contact">Check it Out!</div>
+	<div class="link-list">
+		<div class="link">
+			<a href="https://www.linkedin.com/in/erikcoltey/"> <img src="images/linkedin_icon.svg" alt="LinkedIn" style="width:100%"> </a> <span class="tool-tip">LinkedIn</span> </div>
+		<div class="link">
+			<a href="https://www.artstation.com/colteh/"> <img src="images/artstation_icon.svg" alt="ArtStation" style="width:100%"> </a> <span class="tool-tip">ArtStation</span> </div>
+		<div class="link">
+			<a href="mailto:colteye@gmail.com?Subject=Initial%20Contact"> <img src="images/gmail_icon.svg" alt="Gmail" style="width:100%"> </a> <span class="tool-tip">Gmail</span> </div>
+		<div class="link">
+			<a href="https://github.com/colteye"> <img src="images/github_icon.svg" alt="Github" style="width:100%"> </a> <span class="tool-tip">Github</span> </div>
+		<div class="link">
+			<a href="Erik_Coltey_Resume.pdf"> <img src="images/resume_icon.svg" alt="Resume" style="width:100%"> </a> <span class="tool-tip">Resume</span> </div>
+	</div>
+	<div class="video-container">
+		<video loop autoplay muted>
+			<source src="videos/HISEAS.mp4" type="video/mp4">Your browser does not support the video tag. </video>
+	</div>
+	<div class="item-description"> <span class="item-header">HISEAS VR</span>
+		<p>Built the foundations of a simulation for an analog habitat for Human Exploration Operations (HEO) training. Work included fully modelling and texturing martian and lunar environments from Lunar Reconnaisance Orbiter (LRO) data and Hawaiian mountain topography, along with programming functionality for VR support, vehicle control, and geological tools (LIDAR, XRF).
+			<hr style="opacity:0; height: 10px;">Built as part of an internship with NASA Goddard Space Flight Center (GSFC).</p>
+	</div>
+</body>
+
 </html>

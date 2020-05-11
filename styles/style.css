@@ -1,207 +1,267 @@
+/* using custom variable weight font */
+
 @font-face {
-font-family: "Muli";
-  src: url('fonts/Muli-VariableFont_wght.ttf') format('truetype');
-  font-weight: 1 999;
+	font-family: "Muli";
+	src: url('fonts/Muli-VariableFont_wght.ttf') format('truetype');
+	font-weight: 1 999;
 }
 
-/*:root {	
-	--main-bg-color: rgba(16,16,37,255);
-	--main-txt-color-FullAlpha: rgba(0,102,255,255);
-	--main-txt-color-NoAlpha: rgba(0,102,255,0);
-	
-	--main-highlight-color-FullAlpha: rgba(0,255,102,255);
-	--main-highlight-color-NoAlpha: rgba(0,255,102,0);
-}*/
-*{
-    margin:0;
-    padding:0;
-}
-html, body{
-    height:100%;
+/* base settings */
+
+* {
+	margin: 0;
+	padding: 0;
 }
 
-body{
-	background: rgba(16,16,37,255);
-    //background: rgba(16,16,37,255);
+html,
+body {
+	height: 100%;
 }
 
-.navbar {
+body {
+	background: rgba(16, 16, 37, 255);
+}
+
+/* navbar container */
+
+.nav-bar {
 	z-index: 10;
-	background-color: rgba(16,16,37,255);
+	background-color: rgba(16, 16, 37, 255);
 	overflow: hidden;
-	position: fixed; /* Make it stick/fixed */
-	width: 100%; /* Full width */
-	transition: top 0.3s; /* Transition effect when sliding down (and up) */
+	position: fixed;
+	width: 100%;
+	transition: top 0.3s;
 }
 
-/* Style the links inside the navigation bar */
-.navbar a {
-	background-color: rgba(0,102,255,0);
-    color: rgba(0,102,255,255);
-    font-family: Muli;
+/* Each link in navbar */
+
+.nav-bar a {
+	background-color: rgba(0, 102, 255, 0);
+	color: rgba(0, 102, 255, 255);
+	font-family: Muli;
 	font-weight: 100;
 	font-size: 17px;
-	
 	float: left;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	
 	transition: background-color 250ms, color 250ms;
 }
 
 /* Change the color of links on hover */
-.navbar a:hover{
-    background-color: rgba(0,102,255,255);
-    color: rgba(16,16,37,255);
-    cursor: pointer;
-    
-    transition: background-color 250ms, color 250ms;
-}		
 
-/* Add a color to the active/current link */
-.navbar a.active {
-    background-color: rgba(0,102,255,255);
-    color: rgba(16,16,37,255);
+.nav-bar a:hover {
+	background-color: rgba(0, 102, 255, 255);
+	color: rgba(16, 16, 37, 255);
+	cursor: pointer;
+	transition: background-color 250ms, color 250ms;
 }
 
-.title1{
-    display: block;
-    text-align: center;
-    color:rgba(0,102,255,255);
-    font-size:140pt;
-    font-family:Muli;
+/* My name in large bold */
+
+.title {
+	display: block;
+	text-align: center;
+	color: rgba(0, 102, 255, 255);
+	font-size: 140pt;
+	font-family: Muli;
 	font-weight: 850;
 	letter-spacing: -11px;
-	
 	position: absolute;
 	left: 0;
 	right: 0;
 	margin-left: auto;
 	margin-right: auto;
-
 }
+
+/* three.js canvas */
 
 #canvas {
 	position: relative;
-    display: block;
-    text-align: center;
-    margin: auto;
+	display: block;
+	text-align: center;
+	margin: auto;
 	padding-top: 5%;
 	padding-bottom: 3%;
 }
 
 /*#overlay {
-	z-index: 0;
-	color: rgba(16,16,37,255);
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
-	pointer-events: none;
-}*/
+     z-index: 0;
+     color: rgba(16,16,37,255);
+     position: absolute;
+     left: 0;
+     right: 0;
+     margin-left: auto;
+     margin-right: auto;
+     pointer-events: none;
+}
+*/
 
-.aboutme{
-	display:flex;
+/* about me container */
+
+.about-me {
+	display: flex;
 	flex-direction: row;
-	
 	padding-right: 10%;
 	padding-bottom: 3%;
 	padding-left: 10%;
 }
-.profilepic{
-	display:block;
+
+/* profile picture */
+
+.profile-pic {
+	display: block;
 	height: 40%;
 	width: 40%;
 	padding-right: 5%;
 }
-.meDescription{
-	width: 60%;
-    display:block;
-    text-align: left;
-    color:rgba(0,102,255,255);
-    font-size:20pt;
-    font-family:Muli;
-	font-weight: 100;
-}
-.descriptionHeader{
 
-    color:rgba(0,102,255,255);
-    font-size:40pt;
-    font-family:Muli;
+/* header text for description */
+
+.description-header {
+	color: rgba(0, 102, 255, 255);
+	font-size: 40pt;
+	font-family: Muli;
 	font-weight: 700;
 }
-.contact{
+
+/* description */
+
+.me-description {
+	width: 60%;
+	display: block;
+	text-align: left;
+	color: rgba(0, 102, 255, 255);
+	font-size: 20pt;
+	font-family: Muli;
+	font-weight: 100;
+}
+
+/* contact info text */
+
+.contact {
 	text-align: center;
-    color:rgba(0,102,255,255);
-    font-size:40pt;
-    font-family:Muli;
+	color: rgba(0, 102, 255, 255);
+	font-size: 40pt;
+	font-family: Muli;
 	font-weight: 700;
 	padding-bottom: 1%;
 }
-.linklist {
+
+/* contact links container */
+
+.link-list {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
 	padding-right: 30%;
 	padding-bottom: 3%;
 	padding-left: 30%;
 }
+
+/* contact link container */
+
 .link {
-	animation: glowout 0.2s ease-in-out;
+	animation: glow-out 0.2s ease-in-out;
 	padding-right: 4%;
 	padding-left: 4%;
 	align-self: center;
-	
 }
-.link:hover{
-	animation: glowin 0.4s ease-in-out;
+
+/* when hover on links */
+
+.link:hover {
+	animation: glow-in 0.4s ease-in-out;
 	filter: drop-shadow(0px 0px 4px #b2feff);
 }
-@keyframes glowin {
-  from {
-      filter: drop-shadow(0 0 8px #b2feff);
-  }
-  to {
-      filter: drop-shadow(0 0 4px #b2feff);
-  }
+
+/* custom drop shadow animation when hovered */
+
+@keyframes glow-in {
+	from {
+		filter: drop-shadow(0 0 8px #b2feff);
+	}
+	to {
+		filter: drop-shadow(0 0 4px #b2feff);
+	}
 }
 
-@keyframes glowout {
-  from {
-      filter: drop-shadow(0 0 4px #b2feff);
-  }
-  to {
-      filter: drop-shadow(0 0 0px 0);
-  }
+/* custom drop shadow animation when not hovered */
+
+@keyframes glow-out {
+	from {
+		filter: drop-shadow(0 0 4px #b2feff);
+	}
+	to {
+		filter: drop-shadow(0 0 0px 0);
+	}
 }
 
-.tooltip {
-	position: relative;
-	display: inline-block;
-	visibility: hidden;
+/* tooltips under buttons */
+
+.tool-tip {
 	width: 100%;
 	color: rgba(255, 255, 255, 0);
 	text-align: center;
-
-	font-size:100%;
-	font-family:Muli;
+	font-size: 100%;
+	font-family: Muli;
 	font-weight: 200;
-
 	/* Position the tooltip */
 	position: absolute;
-	z-index: 1;
 	top: 100%;
 	left: 50%;
 	margin-left: -50%;
 	transition: color 200ms;
 }
 
-.link:hover .tooltip {
+/* when link is hovered, show tooltip */
+
+.link:hover .tool-tip {
 	color: rgba(255, 255, 255, 255);
-    visibility: visible;
-    opacity: 1;
 	transition: color 1500ms;
+}
+
+.video-container {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.video-container:after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0) 50%, rgba(16, 16, 37, 1) 100%);
+}
+
+.video-container video {
+	align-self: center;
+	position: absolute;
+	width: 100%;
+}
+
+/* header text for description */
+
+.item-header {
+	color: rgba(0, 102, 255, 255);
+	font-size: 60pt;
+	font-family: Muli;
+	font-weight: 800;
+}
+
+.item-description {
+	padding-right: 2%;
+	padding-left: 2%;
+	display: block;
+	text-align: left;
+	color: rgba(0, 102, 255, 255);
+	font-size: 20pt;
+	font-family: Muli;
+	font-weight: 100;
+	padding-top: 1%;
+	padding-bottom: 3%;
 }
