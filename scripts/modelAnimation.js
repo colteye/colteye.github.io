@@ -66,8 +66,8 @@ function init() {
 	scene.add( light );
 
 	// instantiate a loader
-	var loader = new THREE.PLYLoader();
-
+	var loader = new THREE.PLYLoader();	
+		
 	// load a resource
 	loader.load('./models/moon.ply', function (geometry) {
 		
@@ -75,6 +75,7 @@ function init() {
 		tex.load( './images/LOLA_map.jpg', function ( texture ) {
 		tex.load( './images/LOLA_norm.jpg', function ( normal ) {
 		tex.load( './images/LOLA_rough.jpg', function ( roughness ) {
+
 			texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
 
 			material = new THREE.MeshStandardMaterial( { map: texture, normalMap: normal, roughnessMap: roughness } );
@@ -87,7 +88,10 @@ function init() {
 };
 function animate() {
 	requestAnimationFrame( animate );
-	mesh.rotation.y += 0.001;
+	if (typeof mesh !== "undefined")
+	{
+		mesh.rotation.y += 0.001;
+	}
 	renderer.render( scene, camera );
 };
 
